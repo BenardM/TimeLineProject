@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "io.phonegap.hellophonegap"
+        }
+    }
+}
