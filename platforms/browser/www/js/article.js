@@ -1,6 +1,7 @@
 
       document.addEventListener("volumeupbutton", callbackFunction, false);
       document.getElementById("photoButton").addEventListener("click", cameraTakePicture);
+      document.getElementById("geoButton").addEventListener("click", getGeo);
       document.getElementById("myBtn").addEventListener("click", myFunction);
       document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
       document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
@@ -9,6 +10,7 @@
       document.getElementById("getLocalStorageByKey").addEventListener
       ("click", getLocalStorageByKey);
       var localStorage = window.localStorage;
+
 
 
 
@@ -69,4 +71,10 @@
     function onFail(message) {
     alert('Failed because: ' + message);
     }
+
+    function getGeo(){
+    navigator.geolocation.getCurrentPosition(geolocationSuccess,
+                                         [geolocationError],
+                                         [geolocationOptions]);
+                                       }
    }
