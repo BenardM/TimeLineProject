@@ -1,9 +1,9 @@
 
       document.addEventListener("volumeupbutton", callbackFunction, false);
       document.getElementById("photoButton").addEventListener("click", cameraTakePicture);
-      document.getElementById("geoButton").addEventListener("click", getGeo);
-      document.getElementById("videoButton").addEventListener("click", myFunction);
       document.getElementById("saveButton").addEventListener("click", saveArticle);
+      /*document.getElementById("geoButton").addEventListener("click", getGeo);
+      document.getElementById("videoButton").addEventListener("click", myFunction);*/
       document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
       document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
       document.getElementById("removeProjectFromLocalStorage").addEventListener
@@ -61,18 +61,19 @@
     }
 
     function cameraTakePicture() {
-    navigator.camera.getPicture(onSuccess, onFail, {
-      quality: 50,
-      destinationType: Camera.DestinationType.DATA_URL
-    });
-    function onSuccess(imageData) {
-    var image = document.getElementById('myImage');
-    image.src = "data:image/jpeg;base64," + imageData;
+      navigator.camera.getPicture(onSuccess, onFail, {
+        quality: 50,
+        destinationType: Camera.DestinationType.DATA_URL
+      });
+      function onSuccess(imageData) {
+      var image = document.getElementById('myImage');
+      image.src = "data:image/jpeg;base64," + imageData;
+      }
+      function onFail(message) {
+      alert('Failed because: ' + message);
+      }
     }
-    function onFail(message) {
-    alert('Failed because: ' + message);
-    }
-}
+
     function getGeo(){
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                          [geolocationError],
@@ -80,7 +81,7 @@
     }
 
     function saveArticle(){
-      alert('save button Pressed');
+
       var text = document.getElementById('myText').value;
       var photo = document.getElementById('myImage').value;
       /*var video = document.getElementById('myVideo').value;
@@ -95,11 +96,12 @@
 
 
       var val = JSON.stringify(dataArticle);
-      var key=indice;
-      localStorage.setItem(key, val);
-      return JSON.parse(localStorage.getItem(key));
+      /*var key=indice;*/
+      localStorage.setItem("1", val);
+      return JSON.parse(localStorage.getItem("1"));
+      alert('Article enregisté !');
     }
 
     function getArticle(key){
-      return JSON.parse(localStorage.getItem(key));
+      return JSON.parse(localStorage.getItem("1"));
     }

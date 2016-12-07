@@ -178,3 +178,10 @@ ul.topnav li.icon {display: none;}
   text-align: left;
   display:inline-table;
 }
+
+#myImage{
+  text-align: left;
+  display: inline-block;
+  width: 75%;
+  height: 75%;
+}
