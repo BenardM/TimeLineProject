@@ -2,7 +2,7 @@
       document.addEventListener("volumeupbutton", callbackFunction, false);
       document.getElementById("photoButton").addEventListener("click", cameraTakePicture);
       document.getElementById("geoButton").addEventListener("click", getGeo);
-      document.getElementById("myBtn").addEventListener("click", myFunction);
+      document.getElementById("videoButton").addEventListener("click", myFunction);
       document.getElementById("saveButton").addEventListener("click", saveArticle);
       document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
       document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
@@ -72,7 +72,7 @@
     function onFail(message) {
     alert('Failed because: ' + message);
     }
-
+}
     function getGeo(){
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                          [geolocationError],
@@ -80,7 +80,26 @@
     }
 
     function saveArticle(){
-      localStorage.setItem(date , articleSaved);
+      alert('save button Pressed');
+      var text = document.getElementById('myText').value;
+      var photo = document.getElementById('myImage').value;
+      /*var video = document.getElementById('myVideo').value;
+      var geo = document.getElementById('myGeo').value;*/
+
+      var dataArticle={
+      		text: text,
+      		photo : photo,
+          /*video : video,
+          geo : geo*/
+      	   };
+
+
+      var val = JSON.stringify(dataArticle);
+      var key=indice;
+      localStorage.setItem(key, val);
+      return JSON.parse(localStorage.getItem(key));
     }
 
-   }
+    function getArticle(key){
+      return JSON.parse(localStorage.getItem(key));
+    }
