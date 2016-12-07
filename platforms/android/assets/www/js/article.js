@@ -3,6 +3,7 @@
       document.getElementById("photoButton").addEventListener("click", cameraTakePicture);
       document.getElementById("geoButton").addEventListener("click", getGeo);
       document.getElementById("myBtn").addEventListener("click", myFunction);
+      document.getElementById("saveButton").addEventListener("click", saveArticle);
       document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
       document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
       document.getElementById("removeProjectFromLocalStorage").addEventListener
@@ -76,5 +77,10 @@
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                          [geolocationError],
                                          [geolocationOptions]);
-                                       }
+    }
+
+    function saveArticle(){
+      localStorage.setItem(date , articleSaved);
+    }
+
    }
