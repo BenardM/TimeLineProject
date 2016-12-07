@@ -4,6 +4,7 @@
       document.getElementById("saveButton").addEventListener("click", saveArticle);
       /*document.getElementById("geoButton").addEventListener("click", getGeo);
       document.getElementById("videoButton").addEventListener("click", myFunction);*/
+      document.getElementById("pushIt").addEventListener("click", getArticle);
       document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
       document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
       document.getElementById("removeProjectFromLocalStorage").addEventListener
@@ -81,7 +82,7 @@
     }
 
     function saveArticle(){
-
+      alert('Article enregisté !');
       var text = document.getElementById('myText').value;
       var photo = document.getElementById('myImage').value;
       /*var video = document.getElementById('myVideo').value;
@@ -96,12 +97,25 @@
 
 
       var val = JSON.stringify(dataArticle);
-      /*var key=indice;*/
-      localStorage.setItem("1", val);
-      return JSON.parse(localStorage.getItem("1"));
-      alert('Article enregisté !');
+      var key = new Date();
+      var dd = key.getDate();
+      var mm = key.getMonth()+1; //January is 0!
+      var yyyy = key.getFullYear();
+
+      if(dd<10) {
+          dd='0'+dd
+      }
+
+      if(mm<10) {
+          mm='0'+mm
+      }
+
+      key = mm+'/'+dd+'/'+yyyy;
+      localStorage.setItem(key, val);
+      return JSON.parse(localStorage.getItem(key));
+
     }
 
     function getArticle(key){
-      return JSON.parse(localStorage.getItem("1"));
+      return JSON.parse(localStorage.getItem(key));
     }

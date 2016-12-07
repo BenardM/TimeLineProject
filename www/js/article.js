@@ -4,6 +4,7 @@
       document.getElementById("saveButton").addEventListener("click", saveArticle);
       /*document.getElementById("geoButton").addEventListener("click", getGeo);
       document.getElementById("videoButton").addEventListener("click", myFunction);*/
+      document.getElementById("pushIt").addEventListener("click", getArticle);
       document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
       document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
       document.getElementById("removeProjectFromLocalStorage").addEventListener
@@ -116,5 +117,5 @@
     }
 
     function getArticle(key){
-      return JSON.parse(localStorage.getItem("1"));
+      return JSON.parse(localStorage.getItem(key));
     }
