@@ -37,27 +37,28 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
+    <script type="text/javascript" src="js/responsive.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Hello World</title>
 </head>
 <body>
-  
+
   <ul class="topnav" id="myTopnav">
-   <li><a href="#home">TimeLine</a></li>
+    <li><a href="index.html">TimeLine</a></li>
+    <li><a href="newArticle.html">Creer un article</a></li>
+    <li><a href="#contact">Voir les articles</a></li>
+    <li class="icon">
+      <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    </li>
   </ul>
 
-    <div class="buttonsHome">
-    </br>
-          <button id = "addArticle">Creer un article</button>
-          <button id = "viewArticle">Voir les articles</button>
-    </div>
-
-
+  <h2>TimeLine</h2>
+  <h3>Pour commencer, appuyez sur l'icone en haut a droite.</h3>  
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+
     <script type="text/javascript">
-        app.initialize();
+        //app.initialize();
     </script>
 </body>
 
